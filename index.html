@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCar - Location de Voitures Économiques</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Quick<span>Car</span></div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#cars">Voitures</a></li>
+                    <li><a href="#locations">Agences</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="login-btn" id="loginBtn">Connexion</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Location de Voitures </h1>
+                <p>Découvrez notre sélection de voitures économiques à petits prix. La qualité accessible à tous !</p>
+                <div class="hero-buttons">
+                    <a href="#cars" class="primary-btn">Voir les Voitures</a>
+                    <a href="#about" class="secondary-btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Form -->
+    <div class="container">
+        <div class="search-form-container">
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="pickup-date">Date de début</label>
+                    <input type="date" id="pickup-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Date de fin</label>
+                    <input type="date" id="return-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-type">Type de voiture</label>
+                    <select id="car-type">
+                        <option value="">Tous les types</option>
+                        <option value="economique">Économique</option>
+                        <option value="compact">Compacte</option>
+                        <option value="familiale">Familiale</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Budget max/jour</label>
+                    <input type="range" id="budget" min="20" max="100" step="5">
+                    <output for="budget">60€</output>
+                </div>
+                <button type="button" class="toggle-filters">
+                    <i class="fas fa-sliders-h"></i> Filtres avancés
+                </button>
+                <div class="advanced-filters">
+                    <div class="form-group">
+                        <label for="transmission">Transmission</label>
+                        <select id="transmission">
+                            <option value="">Tous</option>
+                            <option value="manual">Manuelle</option>
+                            <option value="automatic">Automatique</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fuel-type">Carburant</label>
+                        <select id="fuel-type">
+                            <option value="">Tous</option>
+                            <option value="petrol">Essence</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="electric">Électrique</option>
+                            <option value="hybrid">Hybride</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="doors">Nombre de portes</label>
+                        <select id="doors">
+                            <option value="">Tous</option>
+                            <option value="3">3 portes</option>
+                            <option value="5">5 portes</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="search-btn">Rechercher</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Featured Cars Section -->
+    <section id="cars" class="featured-cars-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Voitures </h2>
+                <p>Des  économiques pour tous vos déplacements</p>
+            </div>
+            <div class="featured-cars">
+                <!-- Dacia Sandero -->
+                <div class="car-card">
+                    <div class="car-actions">
+                        <button class="car-action-btn" title="Ajouter aux favoris">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="car-action-btn" title="Comparer">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                    <div class="car-image">
+                        <img src="duster.jpeg" alt="Dacia Sandero">
+                        <span class="promo-tag">Promotion</span>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-name">Dacia Duster </div>
+                        <div class="car-price">25€/jour</div>
+                        <div class="car-features">
+                            <span><i class="fas fa-gas-pump"></i> 5.1L/100km</span>
+                            <span><i class="fas fa-users"></i> 5 places</span>
+                            <span><i class="fas fa-suitcase"></i> 320L</span>
+                        </div>
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(127 avis)</span>
+                        </div>
+                        <button class="reserve-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+
+                <!-- Dacia Logan -->
+                <div class="car-card">
+                    <div class="car-actions">
+                        <button class="car-action-btn" title="Ajouter aux favoris">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="car-action-btn" title="Comparer">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                    <div class="car-image">
+                        <img src="717bf857-24ff-4885-a1ea-833c68864ada.jpeg" alt="Dacia Logan">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-name">Dacia Logan</div>
+                        <div class="car-price">28€/jour</div>
+                        <div class="car-features">
+                            <span><i class="fas fa-gas-pump"></i> 5.4L/100km</span>
+                            <span><i class="fas fa-users"></i> 5 places</span>
+                            <span><i class="fas fa-suitcase"></i> 510L</span>
+                        </div>
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(98 avis)</span>
+                        </div>
+                        <button class="reserve-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+
+                <!-- Dacia Duster -->
+                <div class="car-card">
+                    <div class="car-actions">
+                        <button class="car-action-btn" title="Ajouter aux favoris">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="car-action-btn" title="Comparer">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                    </div>
+                    <div class="car-image">
+                        <img src="Dacia Bigster Concept_ de Duster voorbij.jpeg" alt="Dacia Duster">
+                        <span class="bestseller-tag">Plus demandé</span>
+                    </div>
+                    <div class="car-details">
+                        <div class="car-name">Dacia Duster</div>
+                        <div class="car-price">35€/jour</div>
+                        <div class="car-features">
+                            <span><i class="fas fa-gas-pump"></i> 6.2L/100km</span>
+                            <span><i class="fas fa-users"></i> 5 places</span>
+                            <span><i class="fas fa-suitcase"></i> 478L</span>
+                        </div>
+                        <div class="car-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(215 avis)</span>
+                        </div>
+                        <button class="reserve-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages Section -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pourquoi Choisir QuickCar ?</h2>
+                <p>Des avantages exclusifs pour votre location</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Prix Imbattables</h3>
+                    <p>Les meilleurs tarifs du marché pour des voitures économiques</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Assurance Incluse</h3>
+                    <p>Tous nos véhicules sont assurés tous risques</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Service 24/7</h3>
+                    <p>Assistance routière disponible à tout moment</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Satisfaction Garantie</h3>
+                    <p>Plus de 95% de clients satisfaits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comment ça marche ?</h2>
+                <p>Location simple en 4 étapes</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Recherchez</h3>
+                    <p>Trouvez la voiture idéale parmi notre sélection</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Réservez</h3>
+                    <p>Choisissez vos dates et options</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Récupérez</h3>
+                    <p>Prenez les clés à l'agence</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Retournez</h3>
+                    <p>Ramenez le véhicule à l'agence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-nous</h2>
+                <p>Notre équipe est à votre écoute</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Téléphone</h3>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact@quickcar.fr</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>123 Avenue des Champs-Élysées<br>75008 Paris</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>À propos</h3>
+                    <ul>
+                        <li><a href="#">Notre histoire</a></li>
+                        <li><a href="#">Nos valeurs</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Location courte durée</a></li>
+                        <li><a href="#">Location longue durée</a></li>
+                        <li><a href="#">Assurances</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Aide</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Conditions générales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 QuickCar - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Connexion</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="tab-container">
+                <div class="tab active">Connexion</div>
+                <div class="tab">Inscription</div>
+            </div>
+            <div class="form-container">
+                <form class="modal-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Mot de passe" required>
+                    </div>
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                    </div>
+                    <button type="submit">Se connecter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div class="comparison-modal" id="comparisonModal">
+        <div class="comparison-content">
+            <h2>Comparaison des véhicules</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Caractéristiques</th>
+                        <th>Véhicule 1</th>
+                        <th>Véhicule 2</th>
+                    </tr>
+                </thead>
+                <tbody id="comparisonTableBody">
+                </tbody>
+            </table>
+            <button class="close-comparison">Fermer</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
